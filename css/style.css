@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #BAA796;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.wrapper-contents {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*ヘッダー*/
+header {
+    position: sticky;
+    z-index: 4;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    border-radius: 59px;
+    border: 8px solid #000;
+    background-color: #BAA796;
+}
+
+.header-navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navi ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.header-navi ul li {
+    margin-left: 10%;
+    font-size: 1.2rem;
+}
+
+.header-navi ul a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-navi img {
+    width: 50%;
+}
+
+/*メインヴィジュアル*/
+.main-visual {
+    border: 8px solid #000;
+    border-radius: 59px;
+    padding: 2%;
+    position: relative;
+    margin-bottom: 15%;
+    margin-top: 1%;
+}
+
+.main-visual img {
+    width: 100%;
+}
+.main-visual-photo img{
+    border-radius: 59px;
+}
+.logo-visual img{
+    width: 30%;
+    position: absolute;
+    left: 36%;
+    bottom: -13%;
+}
+.heading{
+font-size: 2rem;
+text-align: center;
+font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*インタラダクション*/
+.introduction {
+    border: 8px solid #000;
+    border-radius: 59px;
+}
+
+.animation-text {
+    padding: 0 0.8% 0 0.8%;
+    color: #72665d;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.text {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.text ul {
+    animation: flowing 20s linear infinite;
+    font-size: 1.2rem;
+    transform: translateX(-100%);
+    margin: 0;
+}
+
+.text ul li {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+@keyframes flowing {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.text-main {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.text-main ul {
+    animation: flowing-main 50s linear infinite;
+    font-size: 5rem;
+    transform: translateX(100%);
+}
+
+@keyframes flowing-main {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.text-main ul li {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.store-introduction {
+    display: flex;
+    border-top: 8px solid #000;
+}
+
+.store-visual img {
+    width: 90%;
+    padding: 5%;
+}
+
+.store-visual {
+    border-right: 8px solid #000;
+    width: 100%;
+}
+
+.store-introduction p {
+    width: 90%;
+    margin: 5% 2% 0 5%;
+    font-size: 1.3rem;
+    line-height: 200%;
+    letter-spacing: 3px;
+    text-align: justify;
+}
+.store-text{
+    width: 100%;
+}
+.store-text img{
+    width: 100%;
+}
+
+/*メニュー*/
+.menu {
+    margin-top: 5%;
+    border: 8px solid #000;
+    border-radius: 59px;
+}
+
+.menu-visual {
+    border-top: 8px solid #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-visual img {
+    width: 90%;
+    margin-top: 5%;
+}
+
+.menu-item {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-item p {
+    font-size: 1.3rem;
+    padding: 0 5% 0 5%;
+}
+
+.menu-item:hover {
+    color: #b05757e3;
+}
+
+.menu-item-contents {
+    border-right: 7px solid #000;
+
+}
+
+.menu-item-contents01 {
+    border-right: 7px solid #000;
+    border-top: 7px solid #000;
+}
+
+.menu-item-contents02 {
+    border-top: 7px solid #000;
+}
+
+/*ニュース*/
+.news {
+    margin-top: 5%;
+    border: 8px solid #000;
+    border-radius: 59px;
+}
+
+.news-text {
+    border-top: 8px solid #000;
+}
+.news-text li:hover{
+    color: #b05757e3;
+}
+.news-text ul {
+    list-style: none;
+    padding-bottom: 2%;
+}
+
+.news-text ul li {
+    margin-top: 5%;
+    font-size: 1.2rem;
+}
+
+.news-text ul li p {
+    margin-right: 4%;
+}
+
+.news-text ul li.news-text-contents {
+    border-bottom: 2px solid #000;
+    width: 96.2%;
+}
+
+.modal-contents {
+    background-color: #BAA796;
+    padding: 20px;
+    border-radius: 59px;
+    max-width: 70%;
+    border: 8px solid #000;
+    animation: fadeIn 0.3s ease-in-out;
+    margin-left: 13%;
+    margin-top: 8%;
+
+}
+.modal-contents p{
+    font-size: 1.1rem;
+}
+.modal-contents img{
+    border-radius: 59px;
+}
+.close02 {
+    position: absolute;
+    right: 200px;
+    cursor: pointer;
+    color: #070707;
+    font-size: 50px;
+}
+/*アドレス*/
+.address {
+    margin-top: 5%;
+    border: 8px solid #000;
+    border-radius: 59px;
+    text-align: center;
+}
+
+.address-text {
+    text-align: left;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    font-size: 1.3rem;
+    line-height: 100%
+}
+
+.map {
+    border-top: 7px solid #000;
+}
+
+iframe {
+    margin-top: 5%;
+    width: 70%;
+    height: 45vh;
+    margin: 5% 9% 2% 10%;
+    border-radius: 59px;
+}
+
+/*モーダル*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    width: 1200px;
+}
+
+.modal img {
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #BAA796;
+    border-radius: 59px;
+    max-width: 70%;
+    border: 8px solid #000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Style to close the modal */
+.close {
+    position: absolute;
+    right: 190px;
+    cursor: pointer;
+    color: #070707;
+    font-size: 50px;
+    /* ボタンのサイズを変更 */
+}
+
+img#modalImage {
+    width: 100%;
+    border-radius: 59px;
+}
+
+#modalText {
+    margin: 5% 10% 5% 10%;
+    font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 5%;
+    text-align: center;
+    border-radius: 59px;
+    border: 8px solid #000;
+}
+.footer-area{
+    margin: 2%;
+}
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 10%;
+}
+
